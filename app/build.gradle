@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    defaultConfig {
+        applicationId "com.stylingandroid.motionvectors"
+        minSdkVersion AndroidSdk.min
+        targetSdkVersion AndroidSdk.target
+        compileSdkVersion AndroidSdk.compile
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {}
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation Libraries.kotlinStdLib
+    implementation Libraries.appCompat
+    implementation Libraries.ktxCore
+    implementation Libraries.constraintLayout
+    implementation Libraries.material
+    implementation Libraries.kyrie
+}
+
+detekt {
+    version = "1.0.1"
+    failFast = true
+    config = files("$projectDir/detekt.yml")
+    reports {
+        xml {
+            destination = file("$project.buildDir/reports/detekt/detekt.xml")
+        }
+    }
+    filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+}
+
+ktlint {
+    android = true
+    version = "0.35.0"
+    ignoreFailures = false
+    reporters {
+        reporter "plain"
+        reporter "checkstyle"
+    }
+    outputToConsole = true
+}

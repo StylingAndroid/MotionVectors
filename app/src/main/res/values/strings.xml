@@ -1,0 +1,14 @@
+<resources>
+  <string name="app_name">MotionVectors</string>
+
+  <string name="max_top_left">M24,8 L8,8 L8,24</string>
+  <string name="min_top_left">M24,8 L24,24 L8,24</string>
+  <string name="max_top_right">M40,8 L56,8 L56,24</string>
+  <string name="min_top_right">M40,8 L40,24 L56,24</string>
+  <string name="max_bottom_left">M24,56 L8,56 L8,40</string>
+  <string name="min_bottom_left">M24,56 L24,40 L8,40</string>
+  <string name="max_bottom_right">M40,56 L56,56 L56,40</string>
+  <string name="min_bottom_right">M40,56 L40,40 L56,40</string>
+  <string name="subtitle">Watch the nice Animation</string>
+
+</resources>
