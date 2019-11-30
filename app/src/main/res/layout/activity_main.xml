@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layoutDescription="@xml/activity_main_scene"
     app:layout_constraintDimensionRatio="1:1"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

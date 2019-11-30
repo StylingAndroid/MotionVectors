@@ -1,8 +1,8 @@
-const val kotlinVersion = "1.3.60-eap-76"
+const val kotlinVersion = "1.3.61"
 
 object BuildPlugins {
     object Version {
-        const val androidBuildToolsVersion = "4.0.0-alpha01"
+        const val androidBuildToolsVersion = "4.0.0-alpha04"
     }
 
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Version.androidBuildToolsVersion}"
@@ -23,9 +23,9 @@ object AndroidSdk {
 object Libraries {
     private object Versions {
         const val appCompat = "1.1.0"
-        const val ktx = "1.2.0-beta01"
+        const val ktx = "1.2.0-rc01"
         const val constraintLayout = "2.0.0-beta3"
-        const val material = "1.2.0-alpha01"
+        const val material = "1.2.0-alpha02"
         const val kyrie = "0.2.1"
     }
 
